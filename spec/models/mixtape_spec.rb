@@ -5,6 +5,11 @@ describe Mixtape do
     @mixtape = Mixtape.new(:name => "My Favorite Playlist")
   end
   
+  it 'is persisted to the database on save' do
+    @mixtape.save
+    @mixtape.should be_persisted
+  end
+  
   it "is valid with valid attributes" do
     @mixtape.should be_valid
   end

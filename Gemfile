@@ -7,6 +7,11 @@ gem 'rails', '3.1.1'
 
 gem 'sqlite3'
 
+gem 'paperclip'
+
+group :development do
+	gem 'ruby-debug19'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.

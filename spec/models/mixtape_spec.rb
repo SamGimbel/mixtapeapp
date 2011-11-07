@@ -1,14 +1,17 @@
 require 'spec_helper'
 
 describe Mixtape do
-
+  before(:each) do
+    @mixtape = Mixtape.new(:name => "My Favorite Playlist")
+  end
+  
   it "is valid with valid attributes" do
-    Mixtape.new(:name => "My Favorite Playlist").should be_valid
+    @mixtape.should be_valid
   end
   
   it "is not valid without a name" do
-    mixtape = Mixtape.new :name => nil
-    mixtape.should_not be_valid
+    @mixtape.name = nil
+    @mixtape.should_not be_valid
   end
   
 end

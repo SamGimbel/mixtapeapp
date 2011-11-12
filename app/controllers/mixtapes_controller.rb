@@ -3,7 +3,7 @@ class MixtapesController < ApplicationController
   # GET /mixtapes.json
   def index
     @mixtapes = Mixtape.all
-
+  
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @mixtapes }
@@ -25,7 +25,8 @@ class MixtapesController < ApplicationController
   # GET /mixtapes/new.json
   def new
     @mixtape = Mixtape.new
-
+    @allsongs = Song.all
+    
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @mixtape }

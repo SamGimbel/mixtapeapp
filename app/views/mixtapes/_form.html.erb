@@ -15,6 +15,19 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+
+  <!-- list all songs with checkboxes to add to the current mixtape -->
+
+   	<ul>
+  <% @allsongs.each do |s| %>
+  <li>
+	<%= f.label s.name %>
+	<%= f.check_box s.id %>
+	<br/>
+	</li> 
+  <%end%>
+  </ul>
+
   <div class="actions">
     <%= f.submit %>
   </div>
